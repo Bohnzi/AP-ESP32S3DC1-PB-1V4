@@ -58,4 +58,4 @@ For each level-shifted signal, you’ll notice duplicate pins: one for the 3.3 V
 This repository is licensed under a custom Source-Available License.  
 - ✅ Personal, hobbyist, and educational use of the code is allowed.  
 - ❌ Commercial use, redistribution, and modification of images/docs are prohibited.  
-- ℹ️ See [LICENSE](./LICENSE) for details. 
+- ℹ️ See [LICENSE](./License) for details. 
