@@ -18,7 +18,7 @@ Designed to get your projects off the ground faster, and, suitable for use in lo
 
 This board provides three usable voltage rails — Vin (whatever voltage you supply the board with), 5 V, and 3.3 V — making it versatile for a wide range of projects and connected devices.
 
-Power in the board is done by connecting input wires to the obard screw terminal header on the left side of the board. I would highly reccommend you use 12V @ 5A.
+Powering the board is done by connecting input wires to the obard screw terminal header on the left side of the board. I would highly reccommend you use 12V @ 5A.
 
 Once 12 V is available on the board, it is stepped down in two stages:
 - 12 V → 5 V
