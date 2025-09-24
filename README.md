@@ -39,7 +39,7 @@ The level shifter also works in reverse: it safely steps down 5 V input signals 
 For each level-shifted signal, you’ll notice duplicate pins: one for the 3.3 V side and one for the 5 V side. ⚠️ Important: these pairs are electrically connected. You can use either the 3.3 V or the 5 V version of a pin (e.g., D0), but not both at the same time.
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/8c019823-ccd9-4054-839f-3a8880111cb1" width="600">
+<img src="https://github.com/user-attachments/assets/4bb017d1-1948-471b-b7f2-5ad96a83798d" width="600">
 </p>
 
 
