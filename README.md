@@ -9,9 +9,8 @@ Designed to get your projects off the ground faster, and, suitable for use in lo
 ### Board Size and hole spacing
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/ead115d4-52d1-4ad5-8a35-0cb6f718a297" alt="Board and Hole Size" width="600">
+<img src="https://github.com/user-attachments/assets/3cc55f01-26e6-490c-bf75-1ed6568e0f5a" alt="Board and Hole Size" width="600">
 </p>
-
 
 ---
 
@@ -36,28 +35,14 @@ This design keeps the board simple, flexible, and safe while giving you multiple
 
 ### Level Translator (Level Shifter) and Pin Voltages
 
-Another key feature of this board, made possible by the 3.3 V and 5 V rails, is the level shifter. This component translates signals between 3.3 V (from the ESP32-C6) and 5 V, enabling you to control devices that require 5 V inputs. For example, the PWM input on a computer fan expects a 5 V signal, so you couldn’t drive it directly from the ESP32 alone.
+Another key feature of this board, made possible by the 3.3 V and 5 V rails, is the level shifter. This component translates signals between 3.3 V (from the ESP32-S3) and 5 V, enabling you to control devices that require 5 V inputs. For example, the PWM input on a computer fan expects a 5 V signal, so you couldn’t drive it directly from the ESP32 alone.
 
-The level shifter also works in reverse: it safely steps down 5 V input signals to 3.3 V, protecting the ESP32-C6 pins. This is particularly useful when working with sensors that output only 5 V, as connecting them directly could damage the microcontroller.
+The level shifter also works in reverse: it safely steps down 5 V input signals to 3.3 V, protecting the ESP32-S3 pins. This is particularly useful when working with sensors that output only 5 V, as connecting them directly could damage the microcontroller.
 
 For each level-shifted signal, you’ll notice duplicate pins: one for the 3.3 V side and one for the 5 V side. ⚠️ Important: these pairs are electrically connected. You can use either the 3.3 V or the 5 V version of a pin (e.g., D0), but not both at the same time.
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/35c7b4ac-7405-447b-96bf-e14d9b0b2173" alt="Board and Hole Size" width="600">
-</p>
-
-
----
-
-### I2C Pinout
-The Seeed Studio ESP32-C6 has a limited number of pins, so this board places D4 and D5 side by side as the dedicated I²C pins (SDA and SCL). These are arranged in a row with 3.3 V and GND on standard 2.54 mm pin spacing, allowing a JST-XH female plug to be soldered directly to the board. This makes it simple to plug in I²C expansion boards and start adding peripherals right away.
-
-For example, if you’re building an air quality sensor, you can connect an I²C expander board to add multiple sensors while still using just the SDA/SCL lines. This gives you more inputs and outputs without tying up other GPIO pins.
-
-I²C expander boards are also very affordable—typically under $5. For reliability, I recommend picking one up from Adafruit or another trusted supplier.
-
-<p align="center">
-<img src="https://github.com/user-attachments/assets/b307e2f8-6209-4f73-991a-0dbc09eff09f" alt="Board and Hole Size" width="600">
+<img src="https://github.com/user-attachments/assets/8c019823-ccd9-4054-839f-3a8880111cb1" width="600">
 </p>
 
 
@@ -66,35 +51,8 @@ I²C expander boards are also very affordable—typically under $5. For reliabil
 ### N-Channel Mosfet
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/687490fc-9464-451d-a145-f8b9201672d1" alt="Board and Hole Size" width="600">
+<img src="https://github.com/user-attachments/assets/066d6ef1-1488-411a-90ee-e34a9e93c5c9" alt="Board and Hole Size" width="600">
 </p>
-
-
----
-
-### D0 Madness
-
-Why are there so many D0 pins on my board?
-
-It might look confusing at first, but D0 can actually be used in three different ways. The most important rule is this: you should only use one version of D0 in your build. That means you can’t use the 5-volt D0, the 3.3-volt D0, and the MOSFET D0 all at the same time. You need to pick just one.
-
-Here’s how the different versions of D0 work:
-
-- 5V GPIO D0 pins
-On the far left side of the board, you’ll see two D0 pins at 5 volts. These go through a level shifter and connect back to the main controller, which means they can be used as normal GPIO pins. This makes them great for general-purpose control of small devices like LEDs, fans, or little motors.
-
-- MOSFET D0
-D0 also drives the onboard MOSFET. In this case, the PWM signal from D0 switches the 12-volt and ground pins on and off very quickly. This is perfect for dimming 12-volt LEDs, since the rapid on/off switching makes them appear dimmer. You can also use it for motors, pumps, or other two-pin 12-volt devices where you need speed or power control.
-
-- 3.3V GPIO D0 pin
-Just to the right of the MOSFET section, you’ll find the standard 3.3-volt GPIO D0 pin. This is a direct general-purpose I/O pin, just like you’d expect on a microcontroller.
-
-So while D0 shows up in multiple places, each one serves a specific purpose. The key is to only choose one version of D0 for your project. If you try to tie them together, you risk damaging the electronics or the sensors you’re connecting.
-
-<p align="center">
-<img src="https://github.com/user-attachments/assets/46e79c0e-ea67-4dec-8329-37b9ef71fcb3" alt="Board and Hole Size" width="600">
-</p>
-
 
 
 ---
