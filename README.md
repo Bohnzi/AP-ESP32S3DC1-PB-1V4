@@ -16,18 +16,15 @@ Designed to get your projects off the ground faster, and, suitable for use in lo
 
 ### Power Rails
 
-This board provides three usable voltage rails — 12 V, 5 V, and 3.3 V — making it versatile for a wide range of projects and connected devices.
+This board provides three usable voltage rails — Vin (whatever voltage you supply the board with), 5 V, and 3.3 V — making it versatile for a wide range of projects and connected devices.
 
-Power can be supplied in two ways:
-- USB-C female connector — The onboard USB-C port negotiates with the charger and requests 12 V at 3 A. Because of the USB-C protocol and the chipset used here, the port is limited to 3 A at 12 V. Higher current (like 12 V at 5 A) would require more advanced USB-C power delivery chips, which this board does not use.
-- Direct 12 V input — Near the USB-C connector, you’ll see two larger VIAs. These allow you to feed the board directly with 12 V at up to 5 A. The onboard power system is designed for this: the power supply, traces, and components are all rated for 5 A and can safely deliver that if needed.
-⚠️ Important: If you’re powering through USB-C, make sure your charger supports the 12 V profile at 3 A. Not all USB-C bricks do — some only provide 9 V or 15 V. For higher-power use cases, connect 12 V directly through the VIAs to take advantage of the full 5 A capacity.
+Power in the board is done by connecting input wires to the obard screw terminal header on the left side of the board. I would highly reccommend you use 12V @ 5A.
 
 Once 12 V is available on the board, it is stepped down in two stages:
 - 12 V → 5 V
 - 12 V → 3.3 V
 
-The ESP32-C6 runs on 3.3 V, which is also the voltage used by most sensors and peripherals. The 5 V rail is handy for certain modules, and the raw 12 V input remains available as well.
+The ESP32-S3 runs on 3.3 V, which is also the voltage used by most sensors and peripherals. The 5 V rail is handy for certain modules, and the raw Vin input remains available as well.
 
 This design keeps the board simple, flexible, and safe while giving you multiple voltage rails to power different devices.
 
