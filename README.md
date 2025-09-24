@@ -42,7 +42,7 @@ For each level-shifted signal, you’ll notice duplicate pins: one for the 3.3 V
 <img src="https://github.com/user-attachments/assets/4bb017d1-1948-471b-b7f2-5ad96a83798d" width="600">
 </p>
 
-⚠️ I had one big learning and one big mistake when designing this board. On the left-hand side, you will see some 12-volt pinouts. I love including these because they make it easy to add things like computer fans or lighting to your projects, both of which need 12V for power and 5V for data.
+⚠️ I had one big learning and one big mistake when designing this board. On the left-hand side, you will see some Vin/Vout 4 pin pinouts. I love including these because they make it easy to add things like computer fans or lighting to your projects, both of which need 12V for power and 5V for data.
 
 Here is where I went wrong. I used a four-pin layout, similar to a computer fan connector, where the first pin is ground, the second is 12V, and the last two are meant to carry the same 5V data signal. My original intent was for those two data pins to be tied together so you could easily hook up a device that uses a 3-pin or 4-pin configuration. But on this version of the board, they are not. Somehow I managed to make both mistakes at once: wrong pin assignment and missing the tied data lines.
 
