@@ -1,9 +1,6 @@
-# AP-ESP32S3DC1-PB-1V4
-Technical Documentation for the AP-ESP32S3DC1-PB-1V4
-
 # Aztec Platforms
-## AP-ESP32C6-PB-1V0
-In this Documentation we will explore the Aztec Platforms AP-ESP32C6-PB-1V0. This board is designed to be a versitile project board that can be used in many ways. The main reason I design these boards is to reduce the amount of wiring for simple tasks like voltage reduction, common pinout placement, PSU jankery, etc.
+## AP-ESP32S3DC1-PB-1V4
+In this Documentation we will explore the Aztec Platforms AP-ESP32S3DC1-PB-1V4. This board is designed to be a versitile project board that can be used in many ways. The main reason I design these boards is to reduce the amount of wiring for simple tasks like voltage reduction, common pinout placement, PSU jankery, etc.
 
 Designed to get your projects off the ground faster, and, suitable for use in long term and permanent projects.
 
