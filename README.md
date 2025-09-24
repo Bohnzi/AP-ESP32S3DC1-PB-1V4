@@ -4,6 +4,8 @@ In this Documentation we will explore the Aztec Platforms AP-ESP32S3DC1-PB-1V4. 
 
 Designed to get your projects off the ground faster, and, suitable for use in long term and permanent projects.
 
+This board is designed for the ESP32-S3-DevKitC-1
+
 # Design Overview
 
 ### Board Size and hole spacing
